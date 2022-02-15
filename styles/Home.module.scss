@@ -1,15 +1,354 @@
-.container {
+.main {
   padding: 0 2rem;
+
 }
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
+.menu {
+  user-select: none;
+  margin: auto;
+  cursor: pointer;
+  width: 276px;
+  height: 56px;
+  background: #35373A;
+  border-color: #35373A;
+  border-radius: 4px 4px 0px 0px;
+  opacity: 1;
+  color: #FFFFFFDE;
+  box-shadow:none;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+
+  &:hover {
+    border-color: #35373A;
+    background-color: #35373A;
+  }
+  &:focus {
+    border-color: #35373A;
+    background-color: #35373A;
+    box-shadow:none;
+
+  }
+  &:active {
+    border-color: #35373A;
+    background-color: #35373A;
+    box-shadow:none;
+
+  }
+  .show {
+    color: #fff;
+    background-color: #35373A;
+    border-color: #35373A;
+  }
+}
+.container {
+  min-height: 100vh;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(404px, 4fr));
+  align-items: start;
+  margin: auto;
+  max-width: 1273px;
+}
+
+
+
+.card {
+  width: 404px;
+  height: 604px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 6px 32px #0E2A6029;
+  border-radius: 8px;
+  opacity: 1;
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  grid-template-rows: auto;
+  grid-template-areas: "T T" "I I" "E C" "M COL" "PACKET PACKET" "P F";
   align-items: center;
+  justify-items: start;
+  padding: 20px 17px 36px 26px;
+
+  .title {
+    grid-area: T;
+    text-align: left;
+    font-family: Roboto Condensed;
+    font-size: 18px;
+    letter-spacing: 0px;
+    color: #303030;
+    display: grid;
+    grid-template-columns: 11fr 1fr;
+    grid-template-areas: "T Y" "V V";
+
+    .text {
+      grid-area: T;
+      padding-top: 5px;
+      display: flex;
+
+      padding-right: 5px;
+      height: 60px;
+    }
+
+    .year {
+      grid-area: Y;
+      font: normal normal normal 14px/28px Roboto Condensed;
+      letter-spacing: 0px;
+
+      color: #22BF86;
+      vertical-align: super;
+    }
+    .vin {
+      grid-area: V;
+      text-align: left;
+      margin: 6px 0px 19px 0px;
+      font: normal normal normal 10px/13px Roboto;;
+      letter-spacing: 1px;
+      color: #707B8C;
+      opacity: 1;
+    }
+  }
+
+
+
+
+
+  .img {
+    grid-area: I;
+  padding-bottom: 18px;
+    img {
+      width: 264px;
+      height: 198px;
+    }
+  }
+
+  .eng {
+    margin-bottom: 18px;
+    grid-area: E;
+
+    display: grid;
+    grid-template-rows: 6fr 6fr;
+    grid-template-areas: "T" "D";
+
+    .text {
+      grid-area: T;
+      margin-bottom: 6px;
+      text-align: left;
+      font: normal normal normal 10px Roboto;
+      letter-spacing: 1px;
+      color: #ACB8BF;
+      text-transform: uppercase;
+      opacity: 1;
+    }
+
+    .desc {
+      grid-area: D;
+      text-align: left;
+      font: normal normal normal 14px Roboto;
+      letter-spacing: 0px;
+      opacity: 1;
+      text-transform: lowercase;
+      color: #303030;
+    }
+
+
+  }
+  .price {
+    grid-area: P;
+    justify-self: start;
+    text-align: left;
+    margin-top: 39px;
+    .count {
+      font: normal normal normal 28px/28px Roboto;
+      letter-spacing: 0px;
+      color: #22BF86;
+      opacity: 1;
+      margin-bottom: 6px;
+    }
+
+    .options {
+      font: normal normal normal 14px Roboto;
+      color: #22BF86;
+      opacity: 1;
+    }
+
+    span {
+      color: #303030;
+    }
+  }
+
+  .cpp {
+    margin-bottom: 18px;
+    grid-area: C;
+    justify-self: start;
+    .text {
+      margin-bottom: 6px;
+      text-align: left;
+      font: normal normal normal 10px Roboto;
+      letter-spacing: 1px;
+      color: #ACB8BF;
+      text-transform: uppercase;
+      opacity: 1;
+    }
+
+    .desc {
+      text-align: left;
+      font: normal normal normal 14px Roboto;
+      letter-spacing: 0px;
+      color: #303030;
+      opacity: 1;
+    }
+  }
+
+  .color {
+    grid-area: COL;
+    justify-self: start;
+    margin-bottom: 18px;
+    .text {
+      margin-bottom: 6px;
+      text-align: left;
+      font: normal normal normal 10px Roboto;
+      letter-spacing: 1px;
+      color: #ACB8BF;
+      text-transform: uppercase;
+      opacity: 1;
+    }
+
+    .desc {
+      text-align: left;
+      font: normal normal normal 14px Roboto;
+      letter-spacing: 0px;
+      color: #303030;
+      opacity: 1;
+      text-transform: capitalize;
+    }
+  }
+
+  .probeg {
+    grid-area: M;
+    margin-bottom: 18px;
+    .text {
+      text-align: left;
+      font: normal normal normal 10px Roboto;
+      letter-spacing: 1px;
+      color: #ACB8BF;
+      text-transform: uppercase;
+      opacity: 1;
+      margin-bottom: 6px;
+    }
+
+    .desc {
+      text-align: left;
+      font: normal normal normal 14px Roboto;
+      letter-spacing: 0px;
+      color: #303030;
+      opacity: 1;
+    };
+  }
+
+  .packets {
+
+    grid-area: PACKET;
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    grid-template-areas: "T T" "PT PC";
+    .text {
+      grid-area: T;
+      text-align: left;
+      font: normal normal normal 10px Roboto;
+      letter-spacing: 1px;
+      color: #ACB8BF;
+      text-transform: uppercase;
+      opacity: 1;
+      margin-bottom: 6px;
+    }
+
+
+
+    .packetsText {
+      grid-area: PT;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: left;
+      font: normal normal normal 14px Roboto;
+      letter-spacing: 0px;
+      color: #303030;
+      opacity: 1;
+    };
+    .packetsCount {
+      grid-area: PC;
+
+      font: normal normal normal 12px Roboto;
+      letter-spacing: 1.2px;
+      color: #707B8C;
+    };
+  }
+  .foo {
+    margin-top: 43px;
+    grid-area: F;
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    justify-self: end;
+    width: 145px;
+    .btn {
+      cursor: pointer;
+      user-select: none;
+      width: 145px;
+      height: 48px;
+      transform: matrix(-1, 0, 0, -1, 0, 0);
+      background: transparent linear-gradient(255deg, #11998E 0%, #38EF7D 100%) 0% 0% no-repeat padding-box;
+      border-radius: 8px;
+      opacity: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .text {
+        transform: matrix(-1, 0, 0, -1, 0, 0);
+        font-family: Roboto;
+        font-size: 10px;
+
+        letter-spacing: 2px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        opacity: 1;
+      }
+    }
+
+    .btnClose {
+      
+      user-select: none;
+      width: 145px;
+      height: 48px;
+      transform: matrix(-1, 0, 0, -1, 0, 0);
+      background: #E7EBF0 0% 0% no-repeat padding-box;
+      border-radius: 8px;
+      opacity: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .text {
+        transform: matrix(-1, 0, 0, -1, 0, 0);
+        font-family: Roboto;
+        font-size: 10px;
+
+        letter-spacing: 2px;
+        color: #707B8C;
+        text-transform: uppercase;
+        opacity: 1;
+      }
+    }
+  }
+
+
+}
+
+
+
+
+
+.dropdown-toggle {
+  color: #fff;
+  background-color: #35373A;
+  border-color: #35373A;
 }
 
 .footer {
@@ -26,91 +365,4 @@
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
 }

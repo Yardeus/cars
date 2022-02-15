@@ -1,14 +1,14 @@
-FROM node:14.15.1-alpine
+FROM node:17.5.0-alpine
 
-WORKDIR /backend
+COPY . .
+
+WORKDIR .
+
+EXPOSE 8002
 
 
 
-EXPOSE 1337
-
-COPY package.json ./
 RUN yarn install
 COPY . ./
-RUN yarn build
 
-CMD yarn start
+CMD yarn dev -p 8002
